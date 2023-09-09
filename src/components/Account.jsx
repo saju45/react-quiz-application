@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classNames from "../styles/Account.module.css";
 
 const Account = () => {
@@ -6,7 +7,7 @@ const Account = () => {
       <span className="material-icons-outlined" title="Account">
         account_circle
       </span>
-      <a href="signup.html">Signup</a>
+      <Link to="/signup">Signup</Link>
     </div>
   );
 };
