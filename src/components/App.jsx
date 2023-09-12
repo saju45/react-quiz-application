@@ -18,10 +18,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/quiz" element={<PrivateRoute />}>
-              <Route path="/quiz" element={<Quiz />} />
+            <Route path="/quiz/:id" element={<PrivateRoute />}>
+              <Route path="/quiz/:id" element={<Quiz />} />
             </Route>
-            <Route path="/result" element={<Result />} />
+            <Route path="/result/:id" element={<Result />} />
           </Routes>
         </Layout>
       </AuthProvider>
