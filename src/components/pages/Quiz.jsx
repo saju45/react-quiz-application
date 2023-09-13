@@ -78,7 +78,7 @@ const Quiz = () => {
       [id]: qna,
     });
 
-    navigate(`/result/${id}`, { qna: qna });
+    navigate(`/result/${id}`, { state: { qna: qna } });
   }
 
   //calculate percentage of progress
@@ -94,6 +94,7 @@ const Quiz = () => {
           <h4>Question can have multiple answers</h4>
 
           <Answers
+            input={true}
             options={qna[currentQuestion].options}
             handleChanged={handleAnswerChanged}
           />
