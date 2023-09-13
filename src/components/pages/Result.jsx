@@ -12,29 +12,6 @@ const Result = () => {
   const { qna } = state;
   const { loading, error, answers } = useAnswers(id);
 
-  // function calculate() {
-  //   let score = 0;
-
-  //   answers.forEach((question, index) => {
-  //     let correntIndex = [];
-  //     let checkedIndex = [];
-
-  //     question.options.forEach((option, index2) => {
-  //       if (option.corrent) correntIndex.push(index2);
-  //       if (qna[index].options[index2].checked) {
-  //         checkedIndex.push(index2);
-  //         option.checked = true;
-  //       }
-  //     });
-
-  //     if (_.isEqual(correntIndex, checkedIndex)) {
-  //       score = score + 5;
-  //     }
-  //   });
-
-  //   return score;
-  // }
-
   function calculate() {
     let score = 0;
 

@@ -104,7 +104,7 @@ const Quiz = () => {
             submit={SubmitQuestion}
             progress={percentage}
           />
-          <MiniPlayer />
+          <MiniPlayer id={id} />
         </>
       )}
     </div>
