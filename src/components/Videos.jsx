@@ -8,6 +8,7 @@ import Video from "./Video";
 const Videos = () => {
   const [page, setPage] = useState(1);
   const { loading, error, videos, hasMore } = useVideoList(page);
+
   return (
     <div>
       {videos.length >= 0 && (
@@ -20,7 +21,11 @@ const Videos = () => {
         >
           {videos.map((video, index) =>
             video.noq > 0 ? (
-              <Link to={`/quiz/${video.youtubeID}`} key={index}>
+              <Link
+                to={`/quiz/${video.youtubeID}`}
+                state={{ videoTitle: video.title }}
+                key={index}
+              >
                 <Video
                   title={video.title}
                   id={video.youtubeID}
